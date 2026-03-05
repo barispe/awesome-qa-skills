@@ -40,6 +40,10 @@ You can copy any subset of these skill folders into your own projects or global 
 - `security-test-advisor/`
 - `ci-pipeline-qa/`
 - `exploratory-testing-guide/`
+- `requirements-to-tests/`
+- `api-test-designer/`
+- `release-sign-off/`
+- `flaky-test-prevention/`
 
 Each directory contains a single `SKILL.md` file describing that role.
 
@@ -406,6 +410,64 @@ There is **no required `.cursor` folder structure** here on purpose: you are fre
 
 **Typical use**:
 - Exploring new or high-risk areas where automation is not yet in place.
+
+---
+
+### `requirements-to-tests` – Requirements Traceability and Acceptance Criteria
+
+**Purpose**: Translates product requirements and acceptance criteria into testable scenarios and maintains traceability between requirements and tests.
+
+**Key responsibilities**:
+- Turn requirements and acceptance criteria into concrete, testable scenarios.
+- Build and maintain requirement → test scenario → test mapping.
+- Identify coverage gaps (requirements with no tests; tests with no requirement).
+- Clarify or refine ambiguous or untestable criteria.
+
+**Typical use**:
+- New features with written acceptance criteria that need test scenarios.
+- Audits of whether current tests cover stated requirements; release sign-off preparation.
+
+---
+
+### `api-test-designer` – Systematic API Test Design
+
+**Purpose**: Designs systematic API test coverage for REST, GraphQL, or gRPC: success paths, errors, auth, payloads, and edge cases.
+
+**Key responsibilities**:
+- Design test scenarios per endpoint (success, validation, auth, authorization, edge).
+- Specify request/response examples and assertion focus.
+- Prioritize and hand off scenarios for implementation.
+
+**Typical use**:
+- Building or refining API-level test suites after endpoint discovery.
+
+---
+
+### `release-sign-off` – Release Go/No-Go Criteria
+
+**Purpose**: Defines clear go/no-go criteria and checklists for release readiness so sign-off is consistent and auditable.
+
+**Key responsibilities**:
+- Define must-have and should-have release criteria.
+- Produce sign-off checklists and decision rules.
+- Record deferred risks and exceptions with follow-up.
+
+**Typical use**:
+- Defining or updating release criteria; preparing for a specific release or go/no-go meeting.
+
+---
+
+### `flaky-test-prevention` – Proactive Test Stability
+
+**Purpose**: Encodes patterns and practices to prevent flaky tests before they appear: waiting, isolation, data, and timing.
+
+**Key responsibilities**:
+- Identify stability risks in test design and implementation.
+- Recommend waiting strategies, isolation, and data practices.
+- Provide do/avoid checklists and stability guidelines.
+
+**Typical use**:
+- Designing new tests or refactoring existing ones for stability; establishing team guidelines.
 
 ---
 
