@@ -1,4 +1,4 @@
-## QA Skills Pack for Agentic QA Systems
+## Awesome QA Skills – Agentic QA Systems
 
 This repository provides a **set of reusable QA role skills** for agentic AI systems (Cursor, other IDE agents, orchestration frameworks) that focus on **test automation and QA engineering workflows**.
 
@@ -28,6 +28,18 @@ You can copy any subset of these skill folders into your own projects or global 
 - `qa-failure-analyst/`
 - `qa-performance-tester/`
 - `qa-accessibility-inspector/`
+- `cypress-to-playwright-migrator/`
+- `playwright-to-cypress-migrator/`
+- `playwright-master/`
+- `cypress-master/`
+- `test-suite-optimizer/`
+- `selector-architect/`
+- `visual-regression-architect/`
+- `mobile-qa-strategist/`
+- `api-contract-testing-architect/`
+- `security-test-advisor/`
+- `ci-pipeline-qa/`
+- `exploratory-testing-guide/`
 
 Each directory contains a single `SKILL.md` file describing that role.
 
@@ -226,6 +238,174 @@ There is **no required `.cursor` folder structure** here on purpose: you are fre
 **Typical use**:
 - Any release or feature with user-facing UI changes.
 - Ongoing accessibility reviews to maintain standards.
+
+---
+
+### `cypress-to-playwright-migrator` – Cypress → Playwright Migration
+
+**Purpose**: Guides systematic migration of Cypress tests to Playwright, mapping patterns, selectors, and helpers while preserving behavior and minimizing flakiness.
+
+**Key responsibilities**:
+- Inventory existing Cypress usage (commands, network stubbing, fixtures, custom commands).
+- Provide Playwright equivalents and highlight behavioral differences.
+- Propose incremental migration strategies and coexistence patterns.
+
+**Typical use**:
+- When moving an existing Cypress UI test suite to Playwright in stages.
+
+---
+
+### `playwright-to-cypress-migrator` – Playwright → Cypress Migration
+
+**Purpose**: Guides migration of Playwright tests to Cypress, adapting fixtures, locators, and helpers to Cypress’s model while preserving intent.
+
+**Key responsibilities**:
+- Analyze current Playwright usage (fixtures, locators, routing, tracing).
+- Map core patterns to Cypress equivalents and call out non-1:1 areas.
+- Suggest safe coexistence and validation strategies.
+
+**Typical use**:
+- When standardizing on Cypress after initial adoption of Playwright.
+
+---
+
+### `playwright-master` – Advanced Playwright Patterns
+
+**Purpose**: Provides advanced Playwright patterns, best practices, and troubleshooting guidance for stable, fast, and maintainable UI/API tests.
+
+**Key responsibilities**:
+- Recommend project structure, fixtures, and config patterns for Playwright.
+- Improve selectors, auth/state handling, and test stability.
+- Leverage tracing, screenshots, and debugging features effectively.
+
+**Typical use**:
+- Designing or refactoring Playwright-heavy test suites.
+
+---
+
+### `cypress-master` – Advanced Cypress Patterns
+
+**Purpose**: Provides advanced Cypress patterns, best practices, and troubleshooting guidance for stable, maintainable UI tests.
+
+**Key responsibilities**:
+- Clarify good use of the command queue, waiting, and assertions.
+- Recommend plugin, support file, and custom command patterns.
+- Tackle common Cypress-specific flakiness and complexity.
+
+**Typical use**:
+- Designing or refactoring Cypress-based test suites.
+
+---
+
+### `test-suite-optimizer` – Suite-Level Optimization
+
+**Purpose**: Analyzes test suites as systems to improve speed, stability, and value by restructuring tests, tagging, and scope.
+
+**Key responsibilities**:
+- Map existing suites, runtimes, and failure patterns.
+- Rebalance the test pyramid and remove redundant or low-value tests.
+- Propose tagging and grouping strategies for smoke vs regression vs slow tests.
+
+**Typical use**:
+- When regression or CI pipelines are slow, flaky, or hard to evolve.
+
+---
+
+### `selector-architect` – Selector Strategy Designer
+
+**Purpose**: Designs robust selector strategies and abstractions for UI tests to reduce brittleness and improve readability across frameworks.
+
+**Key responsibilities**:
+- Define preferred selector types (roles, test IDs, semantics) and anti-patterns.
+- Recommend page/screen object or similar abstractions.
+- Guide refactors away from fragile selectors in critical paths.
+
+**Typical use**:
+- Starting or cleaning up UI test suites with flaky selectors.
+
+---
+
+### `visual-regression-architect` – Visual Testing Strategy
+
+**Purpose**: Designs visual regression testing strategies that catch meaningful UI regressions without overwhelming teams with noise.
+
+**Key responsibilities**:
+- Decide which components/pages/flows warrant visual coverage.
+- Define snapshot/image comparison granularity, tolerances, and masking rules.
+- Integrate visual tests into pipelines and review processes.
+
+**Typical use**:
+- Introducing or taming visual/snapshot-based test suites.
+
+---
+
+### `mobile-qa-strategist` – Mobile-Focused QA Strategy
+
+**Purpose**: Designs risk-based test strategies specifically for mobile apps, accounting for devices, OS versions, and mobile-specific behaviors.
+
+**Key responsibilities**:
+- Define device/OS matrices and platform-specific risks.
+- Plan coverage for permissions, lifecycle events, connectivity changes, and UX.
+- Prioritize mobile automation and manual exploration work.
+
+**Typical use**:
+- Planning QA for native or hybrid mobile applications.
+
+---
+
+### `api-contract-testing-architect` – API Contract Strategy
+
+**Purpose**: Designs API contract testing strategies between services and clients, focusing on compatibility and safe evolution.
+
+**Key responsibilities**:
+- Identify service–consumer relationships and critical contracts.
+- Decide what to validate at contract level vs integration vs E2E.
+- Plan versioning and change-handling for contracts.
+
+**Typical use**:
+- Building or maturing contract testing in service-based systems.
+
+---
+
+### `security-test-advisor` – Security-Oriented QA Ideas
+
+**Purpose**: Brings pragmatic security-focused test ideas into QA planning and implementation (without replacing dedicated security reviews).
+
+**Key responsibilities**:
+- Propose tests around input validation, auth/session handling, and authorization.
+- Highlight rate limiting and abuse scenarios QA can cover.
+- Suggest which checks to automate vs execute manually.
+
+**Typical use**:
+- Adding basic security coverage to web/API features and flows.
+
+---
+
+### `ci-pipeline-qa` – CI/CD Test Execution Design
+
+**Purpose**: Designs how tests run in CI/CD pipelines, deciding which suites run when and with what gating.
+
+**Key responsibilities**:
+- Map suites to pipeline stages (PR, merge, nightly, pre-release).
+- Define gating rules and flakiness handling strategies.
+- Balance fast feedback with deep coverage.
+
+**Typical use**:
+- Integrating or optimizing tests within CI pipelines.
+
+---
+
+### `exploratory-testing-guide` – Structured Exploratory Testing
+
+**Purpose**: Provides structured guidance for high-value exploratory testing sessions, from charters to debriefs.
+
+**Key responsibilities**:
+- Define focused exploratory charters and scopes.
+- Structure session notes so findings are actionable.
+- Feed new risks and candidates for automation back into the QA loop.
+
+**Typical use**:
+- Exploring new or high-risk areas where automation is not yet in place.
 
 ---
 
