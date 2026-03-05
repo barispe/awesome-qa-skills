@@ -16,6 +16,7 @@ You can copy any subset of these skill folders into your own projects or global 
 
 ## Repository Structure
 
+- `qa-master/`
 - `qa-moderator/`
 - `qa-scout/`
 - `qa-strategist/`
@@ -52,6 +53,20 @@ There is **no required `.cursor` folder structure** here on purpose: you are fre
 ---
 
 ## Skills Overview
+
+### `qa-master` – QA Skill Router and Index
+
+**Purpose**: Acts as a master index and router for all QA skills in this repository, suggesting which skills and workflows to apply for a given QA task.
+
+**Key responsibilities**:
+- Interpret high-level QA goals and map them to appropriate skills.
+- Recommend high-level workflows for common scenarios (new feature, stabilization, release, API focus, migrations).
+- Hand off to `qa-moderator` and other specialized skills for detailed execution.
+
+**Typical use**:
+- At the start of QA-focused work to decide which skills to activate and in what rough order.
+
+---
 
 ### `qa-moderator` – QA Orchestrator
 
